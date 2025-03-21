@@ -1,60 +1,60 @@
-# Hotel Reservation System 🏨
+# Hotel Reservation System
 
-Welcome to the **Hotel Reservation System**, a Java-based application for managing hotel reservations efficiently. Whether you're running a small inn or a boutique hotel, this system simplifies the reservation process, enhances guest management, and keeps your business organized.
+## Overview
+This is a **Java-based Hotel Reservation System** that allows users to manage room reservations efficiently. It includes functionalities such as adding, updating, deleting, and viewing reservations. The system interacts with a **database** for persistent storage.
 
-## Features 🌟
+## Features
+- **Database Connectivity**: Uses `DatabaseConnection.java` to manage connections.
+- **CRUD Operations**:
+   - **Reserve a Room** (`ReserveRoom.java`)
+   - **Update a Reservation** (`UpdateReservation.java`)
+   - **Delete a Reservation** (`DeleteReservation.java`)
+   - **View Reservations** (`ViewReservations.java`)
+   - **Exit Option**: Added in the reservation system for better usability.
+- **Room Management**:
+   - Fetch available rooms (`GetRoomNumber.java`)
+- **User Interface**:
+   - Main menu (`MainMenu.java`)
 
-- **Reserve a Room**: Easily make new reservations by providing guest details, room numbers, and contact information.
-- **View Reservations**: Get an overview of all current reservations, including guest names, room numbers, contact details, and reservation dates.
-- **Edit Reservation Details**: Update guest names, room numbers, and contact information for existing reservations.
-- **Delete Reservations**: Remove reservations that are no longer needed.
+## File Structure
+```
+/HotelReservationSystem
+│── .gitignore             # Excludes compiled class files
+│── DatabaseConnection.java  # Manages database connection
+│── DeleteReservation.java   # Deletes existing reservations
+│── GetRoomNumber.java       # Retrieves available room numbers
+│── MainMenu.java            # Main menu for user navigation
+│── README.md                # Documentation file
+│── ReserveRoom.java         # Handles new room reservations
+│── UpdateReservation.java   # Updates existing reservations
+│── ViewReservations.java    # Displays current reservations
+│── .idea/                   # IDE-specific settings (should be ignored)
+```
 
-## Getting Started 🚀
+## Tech Stack
+- **Java**: Core programming language
+- **Swing**: GUI framework for the application
+- **MySQL**: Database for storing reservations
+- **Git**: Version control system
+- **IntelliJ IDEA**: IDE for development
 
-### Prerequisites
-
-- Java Development Kit (JDK)
-- MySQL Database
-- MySQL Connector/J (Java)
-
-### Setup
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/prabhatthakuryt/Hotel-Reservation-System.git
+## How to Run
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/yourusername/HotelReservationSystem.git
+   cd HotelReservationSystem
+   ```
+2. **Compile the Java Files**
+   ```sh
+   javac *.java
+   ```
+3. **Run the Main Program**
+   ```sh
+   java MainMenu
    ```
 
-2. Configure your MySQL database settings in the `HotelReservationSystem.java` file:
+## Contribution
+Feel free to fork this repository and submit pull requests with improvements or additional features.
 
-   ```java
-   private static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_db";
-   private static final String DB_USER = "your_username";
-   private static final String DB_PASSWORD = "your_password";
-   ```
-
-3. Compile and run the application:
-
-   ```bash
-   javac HotelReservationSystem.java
-   java HotelReservationSystem
-   ```
-
-4. Follow the on-screen menu options to use the system.
-
-## Usage 📋
-
-Upon running the application, you'll be presented with a menu to choose your desired operation:
-- **Make a reservation**
-- **View current reservations**
-- **Edit an existing booking**
-- **Delete a reservation**
-- **Exit the system**
-
-Follow the prompts to input reservation details, view current reservations, edit existing bookings, and more.
-
-## Contributing 🤝
-
-Contributions are welcome! Feel free to open issues and pull requests for bug fixes, enhancements, or new features.
-
-**Happy booking! 🌆**
+## License
+This project is open-source and available under the MIT License.
