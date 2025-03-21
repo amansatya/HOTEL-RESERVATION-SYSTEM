@@ -50,7 +50,7 @@ public class UpdateReservation extends JFrame
         }
         try (Connection con=DatabaseConnection.getConnection();Statement stmt = con.createStatement())
         {
-            String query = "UPDATE reservations SET guest_name='" + guestName + "', room_number=" + roomNumber + " WHERE id=" + id;
+            String query = "UPDATE reservations SET guest_name='" + guestName + "', room_number=" + roomNumber + " WHERE reservation_id=" + id;
             int rowsUpdated = stmt.executeUpdate(query);
             if (rowsUpdated > 0)
                 JOptionPane.showMessageDialog(this, "Reservation Updated Successfully!");

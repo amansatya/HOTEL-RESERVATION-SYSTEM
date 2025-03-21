@@ -37,7 +37,7 @@ public class GetRoomNumber extends JFrame {
         }
         try (Connection conn = DatabaseConnection.getConnection(); Statement stmt = conn.createStatement())
         {
-            String query="SELECT room_number FROM reservations WHERE guest_id="+guestID+" AND guest_name='"+guestName+"'";
+            String query="SELECT room_number FROM reservations WHERE reservation_id="+guestID+" AND guest_name='"+guestName+"'";
             ResultSet rs = stmt.executeQuery(query);
             if (rs.next())
                 resultLabel.setText("Room No: " + rs.getInt("room_number"));
