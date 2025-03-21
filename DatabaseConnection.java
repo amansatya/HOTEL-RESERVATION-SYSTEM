@@ -19,12 +19,4 @@ public class DatabaseConnection
             return null;
         }
     }
-    public static void main(String[] args)
-    {
-        Connection conn = getConnection();
-        if (conn != null)
-            System.out.println("✅ Database connected successfully!");
-        else
-            System.out.println("❌ Failed to connect to the database.");
-    }
 }
